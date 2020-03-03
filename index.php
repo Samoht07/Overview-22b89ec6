@@ -35,7 +35,7 @@ $coachdata = $pdo->query("SELECT * from series");
                     <td><?php echo "duur: " . $row['duur']; ?></td>
                </tr>
                <?php
-            }
+           }
             ?>
      </table>
      <h2>Series</h2>
@@ -49,8 +49,8 @@ $coachdata = $pdo->query("SELECT * from series");
             
         </tr>
         <?php
-          }
-           ?>
+            }
+            ?>
      </table>
 </body>
 
