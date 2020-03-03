@@ -20,7 +20,7 @@ try {
 $moviedata = $pdo->query("SELECT * from movies");
 $coachdata = $pdo->query("SELECT * from series");
 ?>
-
+<!-- gewerkt aan de spaties -->
 <html lang="nl">
 <head>  
 </head>
@@ -29,19 +29,19 @@ $coachdata = $pdo->query("SELECT * from series");
      <h2>Films</h2>
      <table>
           <?php foreach ($moviedata as $row){
-               ?>
+                ?>
                <tr>
                     <td><?php echo "title: " . $row['title']; ?></td>
                     <td><?php echo "duur: " . $row['duur']; ?></td>
                </tr>
                <?php
-          }
-          ?>
+            }
+            ?>
      </table>
      <h2>Series</h2>
      <table>
           <?php foreach ($coachdata as $rij){
-        ?>
+                ?>
         
         <tr>
           <td><?php echo "title: " . $rij['title']; ?></td>
@@ -49,8 +49,8 @@ $coachdata = $pdo->query("SELECT * from series");
             
         </tr>
         <?php
-    }
-    ?>
+          }
+           ?>
      </table>
 </body>
 
