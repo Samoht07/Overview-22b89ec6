@@ -30,7 +30,7 @@ $coachdata = $pdo->query("SELECT * from series");
      <table>
         <?php 
         foreach ($moviedata as $row){
-        ?>
+            ?>
         <tr>
             <td><?php echo "title: " . $row['title']; ?></td>
             <td><?php echo "duur: " . $row['duur']; ?></td>
@@ -43,7 +43,7 @@ $coachdata = $pdo->query("SELECT * from series");
      <table>
         <?php 
         foreach ($coachdata as $rij){
-        ?>
+            ?>
         <tr>
             <td><?php echo "title: " . $rij['title']; ?></td>
             <td><?php echo "seasons: " . $rij['seasons']; ?></td>
