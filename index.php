@@ -28,29 +28,29 @@ $coachdata = $pdo->query("SELECT * from series");
      <h1>Welkom op het Netland beheerders panneel</h1>
      <h2>Films</h2>
      <table>
-          <?php foreach ($moviedata as $row){
-                ?>
-               <tr>
-                    <td><?php echo "title: " . $row['title']; ?></td>
-                    <td><?php echo "duur: " . $row['duur']; ?></td>
-               </tr>
-               <?php
-            }
-            ?>
+        <?php 
+        foreach ($moviedata as $row){
+        ?>
+        <tr>
+            <td><?php echo "title: " . $row['title']; ?></td>
+            <td><?php echo "duur: " . $row['duur']; ?></td>
+        </tr>
+        <?php
+        }
+        ?>
      </table>
      <h2>Series</h2>
      <table>
-          <?php foreach ($coachdata as $rij){
-                ?>
-        
+        <?php 
+        foreach ($coachdata as $rij){
+        ?>
         <tr>
-          <td><?php echo "title: " . $rij['title']; ?></td>
-          <td><?php echo "seasons: " . $rij['seasons']; ?></td>
-            
+            <td><?php echo "title: " . $rij['title']; ?></td>
+            <td><?php echo "seasons: " . $rij['seasons']; ?></td>
         </tr>
         <?php
-          }
-            ?>
+        }
+        ?>
      </table>
 </body>
 
