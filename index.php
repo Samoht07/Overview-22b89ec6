@@ -13,8 +13,45 @@ $options = [
 ];
 try {
      $pdo = new PDO($dsn, $user, $pass, $options);
-     echo "Connected to db 'netland' met versie 5.7.26";
+     
 } catch (\PDOException $e) {
-     throw new \PDOException($e->getMessage(), (int)$e->getCode());
+     throw new \PDOException($e->getMessage("no connection"), (int)$e->getCode());
 }
+$moviedata = $pdo->query("SELECT * from movies");
+$coachdata = $pdo->query("SELECT * from series");
 ?>
+
+<html lang="nl">
+<head>  
+</head>
+<body>
+     <h1>Welkom op het Netland beheerders panneel</h1>
+     <h2>Films</h2>
+     <table>
+          <?php foreach ($moviedata as $row){
+               ?>
+               <tr>
+                    <td><?php echo "title: " . $row['title']; ?></td>
+                    <td><?php echo "duur: " . $row['duur']; ?></td>
+               </tr>
+               <?php
+          }
+          ?>
+     </table>
+     <h2>Series</h2>
+     <table>
+          <?php foreach ($coachdata as $rij){
+        ?>
+        
+        <tr>
+          <td><?php echo "title: " . $rij['title']; ?></td>
+          <td><?php echo "seasons: " . $rij['seasons']; ?></td>
+            
+        </tr>
+        <?php
+    }
+    ?>
+     </table>
+</body>
+
+</html>
